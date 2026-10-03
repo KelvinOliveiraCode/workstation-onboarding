@@ -1,0 +1,68 @@
+# Perfis de estacao - workstation-onboarding
+# Dados FICTICIOS: grupos de dominio e impressoras nao existem fora deste
+# repositorio. Cada 'pacotes' referencia um id de
+# config/dicionario-software.yaml (os testes validam essa coerencia).
+
+perfis:
+  - id: contabilidade
+    descricao: 'Estacao do setor de contabilidade; pacote completo de oficio'
+    grupo-dominio: 'ESCR-CONTAB'
+    impressora-padrao: 'IMP-CONTAB-01'
+    pode-instalar-software: false
+    pacotes:
+      - editor-texto-escritorio
+      - planilha-escritorio
+      - apresentacoes-escritorio
+      - leitor-formularios
+      - assinador-digital
+      - visualizador-pdf-interno
+      - antiviral-interno
+      - gerenciador-backup-estacao
+
+  - id: projetista
+    descricao: 'Estacao do setor de projeto; pacotes de dados e rede'
+    grupo-dominio: 'ESCR-PROJETO'
+    impressora-padrao: 'IMP-PROJETO-01'
+    pode-instalar-software: false
+    pacotes:
+      - editor-texto-escritorio
+      - planilha-escritorio
+      - visualizador-pdf-interno
+      - cliente-bancodados
+      - exportador-dados
+      - sincronizador-arquivos
+      - antiviral-interno
+      - monitor-rede-interno
+      - gerenciador-backup-estacao
+
+  - id: recepcao
+    descricao: 'Estacao da recepcao; acesso minimo ao pacote de oficio'
+    grupo-dominio: 'ESCR-RECEPCAO'
+    impressora-padrao: 'IMP-RECEPCAO-01'
+    pode-instalar-software: false
+    pacotes:
+      - editor-texto-escritorio
+      - leitor-formularios
+      - visualizador-pdf-interno
+      - antiviral-interno
+
+  - id: ti
+    descricao: 'Estacao do setor de TI; catalogo completo, pode instalar'
+    grupo-dominio: 'ESCR-TI'
+    impressora-padrao: 'IMP-TECNICO-01'
+    pode-instalar-software: true
+    pacotes:
+      - editor-texto-escritorio
+      - planilha-escritorio
+      - apresentacoes-escritorio
+      - leitor-formularios
+      - assinador-digital
+      - visualizador-pdf-interno
+      - antiviral-interno
+      - criptografador-arquivos
+      - cliente-bancodados
+      - exportador-dados
+      - terminal-leve-empresa
+      - sincronizador-arquivos
+      - monitor-rede-interno
+      - gerenciador-backup-estacao

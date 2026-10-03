@@ -1,0 +1,20 @@
+# Exemplo INVALIDO do catalogo - usado pelos testes e como demonstracao.
+# Problemas de proposito:
+#   - pacotes[1]: falta o campo 'versao'
+#   - pacotes[1]: id 'pacote-dup' duplicado (o mesmo id em pacotes[0])
+#   - pacotes[1]: 'silencioso' com valor que nao e booleano ('sim')
+versao_catalogo: '0.0.0'
+
+pacotes:
+  - id: pacote-dup
+    nome: 'Pacote Dup'
+    versao: '1.0.0'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\pacote-dup\setup.exe'
+
+  - id: pacote-dup
+    nome: 'Pacote Dup de novo'
+    categoria: 'oficio'
+    silencioso: sim
+    origem: '\\srv-software\share\pacote-dup\setup.exe'

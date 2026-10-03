@@ -1,0 +1,114 @@
+# Dicionario de software - workstation-onboarding
+# Catalogo FICTICIO de pacotes internos. Nenhum nome real de programa,
+# driver ou fabricante. Os caminhos de origem apontam para a pasta de
+# rede ficticia \\srv-software, que nao existe fora deste repositorio.
+#
+# Esquema (lido por scripts\Instalar-Software.ps1 e pelos testes Python):
+#   pacotes:
+#     - id: kebab-case        (obrigatorio, unico)
+#       nome: descricao curta (obrigatorio)
+#       versao: numerica      (obrigatorio, string)
+#       categoria: grupo     (obrigatorio)
+#       silencioso: true/false (obrigatorio, booleano)
+#       origem: caminho de rede (obrigatorio, \\srv-...)
+
+versao_catalogo: '2026.10'
+
+pacotes:
+  - id: editor-texto-escritorio
+    nome: 'Editor de Texto do Escritorio'
+    versao: '14.2.1'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\editor-texto-escritorio\setup.exe'
+
+  - id: planilha-escritorio
+    nome: 'Planilha do Escritorio'
+    versao: '14.2.1'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\planilha-escritorio\setup.exe'
+
+  - id: apresentacoes-escritorio
+    nome: 'Apresentacoes do Escritorio'
+    versao: '14.2.1'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\apresentacoes-escritorio\setup.exe'
+
+  - id: leitor-formularios
+    nome: 'Leitor de Formularios Digitais'
+    versao: '7.0.3'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\leitor-formularios\setup.exe'
+
+  - id: assinador-digital
+    nome: 'Assinador Digital Interno'
+    versao: '3.4.0'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\assinador-digital\setup.exe'
+
+  - id: visualizador-pdf-interno
+    nome: 'Visualizador de PDF Interno'
+    versao: '2.9.5'
+    categoria: 'oficio'
+    silencioso: true
+    origem: '\\srv-software\share\visualizador-pdf-interno\setup.exe'
+
+  - id: antiviral-interno
+    nome: 'Antiviral Interno'
+    versao: '21.6.2'
+    categoria: 'seguranca'
+    silencioso: true
+    origem: '\\srv-software\share\antiviral-interno\setup.exe'
+
+  - id: criptografador-arquivos
+    nome: 'Criptografador de Arquivos'
+    versao: '5.1.0'
+    categoria: 'seguranca'
+    silencioso: true
+    origem: '\\srv-software\share\criptografador-arquivos\setup.exe'
+
+  - id: cliente-bancodados
+    nome: 'Cliente de Banco de Dados'
+    versao: '9.3.8'
+    categoria: 'dados'
+    silencioso: false
+    origem: '\\srv-software\share\cliente-bancodados\setup.exe'
+
+  - id: exportador-dados
+    nome: 'Exportador de Dados do Servidor'
+    versao: '4.0.2'
+    categoria: 'dados'
+    silencioso: true
+    origem: '\\srv-software\share\exportador-dados\setup.exe'
+
+  - id: terminal-leve-empresa
+    nome: 'Terminal Leve da Empresa'
+    versao: '6.2.7'
+    categoria: 'produtividade'
+    silencioso: true
+    origem: '\\srv-software\share\terminal-leve-empresa\setup.exe'
+
+  - id: sincronizador-arquivos
+    nome: 'Sincronizador de Arquivos'
+    versao: '2.3.4'
+    categoria: 'produtividade'
+    silencioso: true
+    origem: '\\srv-software\share\sincronizador-arquivos\setup.exe'
+
+  - id: monitor-rede-interno
+    nome: 'Monitor de Rede Interno'
+    versao: '1.8.0'
+    categoria: 'rede'
+    silencioso: true
+    origem: '\\srv-software\share\monitor-rede-interno\setup.exe'
+
+  - id: gerenciador-backup-estacao
+    nome: 'Gerenciador de Backup da Estacao'
+    versao: '8.1.1'
+    categoria: 'sistema'
+    silencioso: true
+    origem: '\\srv-software\share\gerenciador-backup-estacao\setup.exe'

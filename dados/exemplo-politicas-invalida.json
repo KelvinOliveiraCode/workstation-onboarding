@@ -1,0 +1,25 @@
+{
+  "versao": "0.0.0",
+  "aplicar_a": "todas-estacoes",
+  "bloqueio_tela": {
+    "minutos": 0
+  },
+  "execution_policy_powershell": {
+    "escopo": "usuario",
+    "valor": "Banana"
+  },
+  "windows_update": {
+    "modo": "automatico",
+    "janela_inicio": 5,
+    "janela_fim": 4
+  },
+  "firewall": {
+    "perfil_padrao": "dominio"
+  },
+  "senha_minima": {
+    "comprimento": 4
+  },
+  "auditoria": {
+    "habilitada": "sim"
+  }
+}

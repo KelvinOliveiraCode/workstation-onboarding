@@ -1,0 +1,78 @@
+[2026-10-03 19:44:53] === Instalar-Workstation: inicio (modo: dry-run) ===
+[2026-10-03 19:44:53] ETAPA 1/5: Rede (Configurar-Rede.ps1)
+[2026-10-03 19:44:53] === inicio Configurar-Rede (modo: dry-run) ===
+[2026-10-03 19:44:53] [WhatIf]   definir servidores DNS 10.10.10.10 e 10.10.10.11 no adaptador primario
+[2026-10-03 19:44:53] [WhatIf]   definir fuso horario America/Sao_Paulo
+[2026-10-03 19:44:53] [WhatIf]   definir proxy corporativo proxy.interno:8080 (HKCU)
+[2026-10-03 19:44:53] [WhatIf]   desativar auto-configuracao de proxy (AutoConfigURL)
+[2026-10-03 19:44:53] === fim Configurar-Rede: 0 falha(s) ===
+[2026-10-03 19:44:53] ETAPA 1/5: Rede OK (codigo 0)
+[2026-10-03 19:44:53] ETAPA 2/5: Impressoras (Configurar-Impressoras.ps1)
+[2026-10-03 19:44:53] === inicio Configurar-Impressoras (modo: dry-run) ===
+[2026-10-03 19:44:53] [WhatIf]   remover impressoras temporarias com prefixo IMP-TMP-
+[2026-10-03 19:44:53] [WhatIf]   cadastrar impressora IMP-ESCR-001 (share \\srv-printa-01\imp-esc-001)
+[2026-10-03 19:44:53] [WhatIf]   definir IMP-ESCR-001 como impressora padrao
+[2026-10-03 19:44:53] === fim Configurar-Impressoras: 0 falha(s) ===
+[2026-10-03 19:44:53] ETAPA 2/5: Impressoras OK (codigo 0)
+[2026-10-03 19:44:53] ETAPA 3/5: Software (Instalar-Software.ps1)
+[2026-10-03 19:44:53] === inicio Instalar-Software (modo: dry-run) ===
+[2026-10-03 19:44:53] INFO       catalogo v2026.10 com 14 pacote(s)
+[2026-10-03 19:44:53] [WhatIf]   instalar editor-texto-escritorio v14.2.1 (categoria: oficio)
+[2026-10-03 19:44:53] [WhatIf]   instalar planilha-escritorio v14.2.1 (categoria: oficio)
+[2026-10-03 19:44:53] [WhatIf]   instalar apresentacoes-escritorio v14.2.1 (categoria: oficio)
+[2026-10-03 19:44:53] [WhatIf]   instalar leitor-formularios v7.0.3 (categoria: oficio)
+[2026-10-03 19:44:53] [WhatIf]   instalar assinador-digital v3.4.0 (categoria: oficio)
+[2026-10-03 19:44:53] [WhatIf]   instalar visualizador-pdf-interno v2.9.5 (categoria: oficio)
+[2026-10-03 19:44:53] [WhatIf]   instalar antiviral-interno v21.6.2 (categoria: seguranca)
+[2026-10-03 19:44:53] [WhatIf]   instalar criptografador-arquivos v5.1.0 (categoria: seguranca)
+[2026-10-03 19:44:53] [WhatIf]   instalar cliente-bancodados v9.3.8 (categoria: dados)
+[2026-10-03 19:44:53] [WhatIf]   instalar exportador-dados v4.0.2 (categoria: dados)
+[2026-10-03 19:44:53] [WhatIf]   instalar terminal-leve-empresa v6.2.7 (categoria: produtividade)
+[2026-10-03 19:44:53] [WhatIf]   instalar sincronizador-arquivos v2.3.4 (categoria: produtividade)
+[2026-10-03 19:44:53] [WhatIf]   instalar monitor-rede-interno v1.8.0 (categoria: rede)
+[2026-10-03 19:44:53] [WhatIf]   instalar gerenciador-backup-estacao v8.1.1 (categoria: sistema)
+[2026-10-03 19:44:53] === fim Instalar-Software: 0 falha(s) ===
+[2026-10-03 19:44:53] ETAPA 3/5: Software OK (codigo 0)
+[2026-10-03 19:44:53] ETAPA 4/5: Politicas (Aplicar-Politicas.ps1)
+[2026-10-03 19:44:53] === inicio Aplicar-Politicas (modo: dry-run) ===
+[2026-10-03 19:44:53] [WhatIf]   definir bloqueio de tela em 10 minutos
+[2026-10-03 19:44:53] [WhatIf]   definir execution policy do PowerShell para RemoteSigned (escopo usuario)
+[2026-10-03 19:44:53] [WhatIf]   definir janela de atualizacao do sistema 3:00 a 4:00 (modo automatico)
+[2026-10-03 19:44:53] [WhatIf]   definir perfil de firewall padrao: dominio
+[2026-10-03 19:44:53] [WhatIf]   definir politica de senha minima: 12 caracteres, expira em 60 dias
+[2026-10-03 19:44:53] [WhatIf]   habilitar auditoria de eventos: login, politica
+[2026-10-03 19:44:53] === fim Aplicar-Politicas: 0 falha(s) ===
+[2026-10-03 19:44:53] ETAPA 4/5: Politicas OK (codigo 0)
+[2026-10-03 19:44:53] ETAPA 5/5: Verificacao final (Verificar-Workstation.ps1)
+================================================================
+ VERIFICACAO DE WORKSTATION - relatorio de validacao
+================================================================
+ Executado em : 2026-10-03 19:44:53  (timestamp; muda a cada execucao)
+ Estacao      : DESKTOP-MQ2N9CF
+ PowerShell   : 5.1.19041.6456
+ Modo         : somente leitura (nao altera a estacao)
+
+STATUS  CHECAGEM                            DETALHE
+------  ----------------------------------  -------------------------------------------------------------
+OK      config: pasta de configuracao       existe (config)
+OK      config/dicionario-software.yaml     14 pacotes, 6 campos por pacote
+OK      config/perfis-usuario.yaml          4 perfis com bloco de pacotes
+OK      config/politicas.json               6 politicas obrigatorias presentes
+OK      scripts/Instalar-Workstation.ps1    marcadores de seguranca presentes
+OK      scripts/Configurar-Rede.ps1         marcadores de seguranca presentes
+OK      scripts/Configurar-Impressoras.ps1  marcadores de seguranca presentes
+OK      scripts/Instalar-Software.ps1       marcadores de seguranca presentes
+OK      scripts/Aplicar-Politicas.ps1       marcadores de seguranca presentes
+OK      scripts/Verificar-Workstation.ps1   marcadores de seguranca presentes
+OK      estrutura do repositorio            2 docs, 2 exemplos, 4 testes Python
+OK      logs: pasta gravavel                escrita e limpeza de probe OK
+OK      PowerShell                          versao 5.1.19041.6456 (>= 5.1)
+AVISO   administracao                       nao e administrador; dry-run nao exige, -Executar pode exigir
+OK      execution policy (usuario)          RemoteSigned
+------  ----------------------------------  -------------------------------------------------------------
+ Total: 14 OK, 0 FALHA, 1 AVISO
+ RESULTADO: PASSOU
+================================================================
+ Log gravado em: logs\verificar-workstation.log (caminho relativo a raiz do repo)
+[2026-10-03 19:44:54] ETAPA 5/5: verificacao PASSOU (codigo 0)
+[2026-10-03 19:44:54] === fim Instalar-Workstation: 0 etapa(s) com falha ===

@@ -1,0 +1,30 @@
+================================================================
+ VERIFICACAO DE WORKSTATION - relatorio de validacao
+================================================================
+ Executado em : 2026-10-03 19:44:55  (timestamp; muda a cada execucao)
+ Estacao      : DESKTOP-MQ2N9CF
+ PowerShell   : 5.1.19041.6456
+ Modo         : somente leitura (nao altera a estacao)
+
+STATUS  CHECAGEM                            DETALHE
+------  ----------------------------------  -------------------------------------------------------------
+OK      config: pasta de configuracao       existe (config)
+OK      config/dicionario-software.yaml     14 pacotes, 6 campos por pacote
+OK      config/perfis-usuario.yaml          4 perfis com bloco de pacotes
+OK      config/politicas.json               6 politicas obrigatorias presentes
+OK      scripts/Instalar-Workstation.ps1    marcadores de seguranca presentes
+OK      scripts/Configurar-Rede.ps1         marcadores de seguranca presentes
+OK      scripts/Configurar-Impressoras.ps1  marcadores de seguranca presentes
+OK      scripts/Instalar-Software.ps1       marcadores de seguranca presentes
+OK      scripts/Aplicar-Politicas.ps1       marcadores de seguranca presentes
+OK      scripts/Verificar-Workstation.ps1   marcadores de seguranca presentes
+OK      estrutura do repositorio            2 docs, 2 exemplos, 4 testes Python
+OK      logs: pasta gravavel                escrita e limpeza de probe OK
+OK      PowerShell                          versao 5.1.19041.6456 (>= 5.1)
+AVISO   administracao                       nao e administrador; dry-run nao exige, -Executar pode exigir
+OK      execution policy (usuario)          RemoteSigned
+------  ----------------------------------  -------------------------------------------------------------
+ Total: 14 OK, 0 FALHA, 1 AVISO
+ RESULTADO: PASSOU
+================================================================
+ Log gravado em: logs\verificar-workstation.log (caminho relativo a raiz do repo)

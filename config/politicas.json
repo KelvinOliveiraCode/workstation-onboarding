@@ -1,0 +1,28 @@
+{
+  "versao": "2026.10",
+  "aplicar_a": "todas-estacoes",
+  "bloqueio_tela": {
+    "minutos": 10
+  },
+  "execution_policy_powershell": {
+    "escopo": "usuario",
+    "valor": "RemoteSigned"
+  },
+  "windows_update": {
+    "modo": "automatico",
+    "janela_inicio": 3,
+    "janela_fim": 4
+  },
+  "firewall": {
+    "perfil_padrao": "dominio",
+    "permite_redes_private": true
+  },
+  "senha_minima": {
+    "comprimento": 12,
+    "expira_dias": 60
+  },
+  "auditoria": {
+    "habilitada": true,
+    "eventos": ["login", "politica"]
+  }
+}
