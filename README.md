@@ -15,7 +15,7 @@ Laboratório educacional funcional e testado (52 testes).
 ## Funcionalidades
 
 - **Validação de configurações** (`schema.py`): `carregar_yaml`/`carregar_json`, `validar_perfis`, `validar_politicas`, `checar_coerencia` (perfis ↔ dicionário) e `validar_configuracoes` agregando tudo.
-- **Auditoria de scripts** (`auditoria.py`): `auditar_script`/`auditar_diretorio` — verificação estática dos scripts (regras + fabricantes), antes de rodar nada na máquina.
+- **Auditoria de scripts** (`auditoria.py`): `auditar_script`/`auditar_diretorio`, verificação estática dos scripts (regras + fabricantes), antes de rodar nada na máquina.
 - **CLI** (`workstation`): `verificar <dir>` e `auditoria <dir>`.
 
 ## Arquitetura
@@ -38,7 +38,7 @@ flowchart LR
 
 ## Estrutura do repositório
 
-```
+```text
 workstation-onboarding/
 ├── pyproject.toml · BRIEF.md
 ├── src/workstation/
@@ -74,13 +74,13 @@ PYTHONPATH=src python -m pytest tests/
 
 ## Decisões técnicas e trade-offs
 
-- **Configuração declarativa (YAML)**: perfis revisáveis em revisão de código, executados por outro motor.
-- **Auditoria estática antes de executar**: risco pego na revisão, não só na máquina.
-- **Coerência perfis ↔ dicionário**: evita perfis referenciando coisas inexistentes.
+- Configuração declarativa (YAML): perfis revisáveis em revisão de código, executados por outro motor.
+- Auditoria estática antes de executar: risco pego na revisão, antes de chegar à máquina.
+- Coerência perfis ↔ dicionário: evita perfis referenciando coisas inexistentes.
 
 ## Limitações conhecidas e roadmap
 
-- Este repo **valida e audita** os scripts — não executa a configuração (sem motor de aplicação).
+- Este repo **valida e audita** os scripts, não executa a configuração (sem motor de aplicação).
 - Auditoria por regras simples, sem parser completo de PowerShell.
 
 ## Processo de desenvolvimento
@@ -89,4 +89,4 @@ Projeto individual de Kelvin Oliveira, construído com agentes de IA orquestrado
 
 ## Licença e autor
 
-MIT — Copyright (c) 2026 Kelvin Rebelo de Oliveira. Autor: [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfólio](https://kelvinoliveiracode.github.io/portfolio/)
+MIT. Copyright (c) 2026 Kelvin Rebelo de Oliveira. Autor: [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfólio](https://kelvinoliveiracode.github.io/portfolio/)
